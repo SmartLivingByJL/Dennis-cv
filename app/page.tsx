@@ -48,10 +48,6 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="live-data">
-           <HomeAssistantSensors />
-        </Section>
-
         <Section id="experience">
           <Heading>Trajectory</Heading>
           <div className="grid md:grid-cols-12 gap-12">
@@ -63,6 +59,24 @@ export default function Home() {
               <Timeline />
             </div>
           </div>
+        </Section>
+
+        <Section id="showcase">
+          <Heading>Showcase</Heading>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+             <Card title="Examensarbete" subtitle="Upcoming">
+               <p className="mb-4 text-zinc-400">Plats för ditt framtida examensarbete inom energiteknik och optimering.</p>
+               <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">2026</span>
+             </Card>
+             <Card title="Betyg & Intyg" subtitle="Academic Records">
+               <p className="mb-4 text-zinc-400">Samlade betyg och certifikat från utbildningar och kurser.</p>
+               <div className="flex gap-2">
+                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">PDF</span>
+                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">Docs</span>
+               </div>
+             </Card>
+          </div>
+          <HomeAssistantSensors />
         </Section>
 
         <Section id="expertise">
