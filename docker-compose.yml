@@ -5,7 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: dennis-cv
     restart: always
-    ports:
-      - "3000:3000"
+    network_mode: host
+    env_file:
+      - .env.local
     environment:
       - NODE_ENV=production
