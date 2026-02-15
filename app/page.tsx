@@ -7,6 +7,7 @@ import { Section, Heading, Card } from "@/components/UI";
 import { Timeline } from "@/components/Timeline";
 import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
+import HomeAssistantSensors from "@/components/HomeAssistantSensors";
 import Image from "next/image";
 
 export default function Home() {
@@ -45,6 +46,10 @@ export default function Home() {
              />
              <div className="absolute inset-0 ring-1 ring-white/10" />
           </div>
+        </Section>
+
+        <Section id="live-data">
+           <HomeAssistantSensors />
         </Section>
 
         <Section id="experience">
