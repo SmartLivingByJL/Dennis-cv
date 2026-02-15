@@ -8,26 +8,68 @@ export const Timeline = () => {
       company: "John Ericsson Institutet",
       desc: "Specialized vocational education in energy production, efficiency, and sustainable systems. Focus on grid optimization and industrial control."
     },
+    {
+      year: "2016–2018",
+      title: "Energitekniker",
+      company: "Högskolan i Dalarna",
+      desc: "Professional education in energy engineering and sustainable systems. Focus on renewable production, electrical installation (BB1), and industrial management with an emphasis on energy efficiency and technical leadership."
+    },
+    {
+      year: "2000–2004",
+      title: "Teknikprogrammet",
+      company: "Kavelbrogymnasiet",
+      desc: "Specialized education in network communications and software development. Focus on infrastructure optimization, connectivity, and industrial programming"
+    },
   ];
 
   const work = [
     {
       year: "2021–Present",
-      title: "Drifttekniker",
+      title: "Operations Technician",
       company: "Skövde Energi",
       desc: "Operation and monitoring of district heating networks, boilers, and turbines. Process optimization for energy security."
     },
     {
       year: "2018–2021",
-      title: "Drifttekniker",
+      title: "Operations Technician",
       company: "Lidköping Energi",
       desc: "Operational responsibility for energy production facilities. Maintenance and troubleshooting of critical infrastructure."
     },
     {
       year: "2015–2017",
-      title: "Tekniker",
+      title: "Technician",
       company: "Ericsson LSS",
-      desc: "Maintenance of Skanova/Telia networks. Critical infrastructure service for mobile masts and technical sites."
+      desc: "Installation and maintenance of Skanova/Telia networks. Technical service and supervision of mobile masts and infrastructure."
+    },
+    {
+      year: "2014–2015",
+      title: "Service/Radio Engineer",
+      company: "Eltel Networks",
+      desc: "Field service for mobile networks and Rakel infrastructure. Participation in national projects with on-call emergency response."
+    },
+    {
+      year: "2013–2014",
+      title: "Field Engineer",
+      company: "3GNS Telecom",
+      desc: "National projects involving upgrades and reconstruction of mobile sites across Sweden."
+    },
+    {
+      year: "2010–2012",
+      title: "Operations Engineer",
+      company: "Eltel Networks",
+      desc: "Network monitoring for Rakel and the Swedish Maritime Administration. Shift-based operational oversight."
+    },
+    {
+      year: "2006–2010",
+      title: "IP/LAN Technician",
+      company: "Eltel Networks",
+      desc: "Installation and service within Telia's network, including technical support and emergency standby."
+    },
+    {
+      year: "2004–2006",
+      title: "Network Technician",
+      company: "Relacom / Flextronics",
+      desc: "Installation and maintenance of distribution network equipment within Telia's infrastructure."
     },
   ];
 

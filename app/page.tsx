@@ -55,7 +55,7 @@ export default function Home() {
         <Section id="experience">
           <Heading>Trajectory</Heading>
           <div className="grid md:grid-cols-12 gap-12">
-            <div className="md:col-span-4 text-zinc-500 text-sm font-mono sticky top-32 h-fit">
+            <div className="md:col-span-4 text-zinc-500 text-sm font-mono md:sticky md:top-32 h-fit">
               <p>A career built on precision, reliability, and continuous learning.</p>
               <p className="mt-4">From field technician to engineering strategist.</p>
             </div>
