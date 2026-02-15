@@ -64,17 +64,20 @@ export default function Home() {
         <Section id="showcase">
           <Heading>Showcase</Heading>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-             <Card title="Examensarbete" subtitle="Upcoming">
-               <p className="mb-4 text-zinc-400">Plats för ditt framtida examensarbete inom energiteknik och optimering.</p>
-               <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">2026</span>
-             </Card>
-             <Card title="Betyg & Intyg" subtitle="Academic Records">
-               <p className="mb-4 text-zinc-400">Samlade betyg och certifikat från utbildningar och kurser.</p>
-               <div className="flex gap-2">
-                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">PDF</span>
-                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">Docs</span>
-               </div>
-             </Card>
+             <a href="/DJL_EX.pdf" target="_blank" rel="noopener noreferrer" className="block">
+               <Card title="Examensarbete" subtitle="Thesis Project">
+                 <p className="mb-4 text-zinc-400">Utforska mitt examensarbete inom energiteknik och optimering.</p>
+                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500 hover:text-white hover:border-white transition-colors">Download PDF</span>
+               </Card>
+             </a>
+             <a href="/DJL_HD_Grade.pdf" target="_blank" rel="noopener noreferrer" className="block">
+               <Card title="Betyg & Intyg" subtitle="Academic Records">
+                 <p className="mb-4 text-zinc-400">Samlade betyg och certifikat från Högskolan Dalarna.</p>
+                 <div className="flex gap-2">
+                   <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500 hover:text-white hover:border-white transition-colors">Download PDF</span>
+                 </div>
+               </Card>
+             </a>
           </div>
           <HomeAssistantSensors />
         </Section>

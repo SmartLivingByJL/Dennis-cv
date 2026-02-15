@@ -20,5 +20,14 @@ export const Contact = () => (
         </a>
       ))}
     </div>
+    
+    <div className="flex gap-4 justify-center mt-8 pt-8 border-t border-zinc-900 w-full">
+      <a href="/DJL_CV_en.pdf" className="px-6 py-3 border border-zinc-800 rounded-full hover:bg-white hover:text-black transition-all text-sm font-mono tracking-wider">
+        Download CV (EN)
+      </a>
+      <a href="/DJL_CV_se.pdf" className="px-6 py-3 border border-zinc-800 rounded-full hover:bg-white hover:text-black transition-all text-sm font-mono tracking-wider">
+        Ladda ner CV (SV)
+      </a>
+    </div>
   </div>
 );
