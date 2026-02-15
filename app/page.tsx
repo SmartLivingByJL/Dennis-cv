@@ -76,34 +76,58 @@ export default function Home() {
 
         <Section id="showcase">
           <Heading>{t.showcase.heading}</Heading>
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-             <a href="/DJL_EX.pdf" target="_blank" rel="noopener noreferrer" className="block">
-               <Card title={t.showcase.thesis.title} subtitle={t.showcase.thesis.subtitle}>
-                 <p className="mb-4 text-zinc-400">{t.showcase.thesis.desc}</p>
-                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500 hover:text-white hover:border-white transition-colors">{t.showcase.thesis.button}</span>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+             <a href="/DJL_EX.pdf" target="_blank" rel="noopener noreferrer" className="block h-full">
+               <Card title={t.showcase.thesis.title} subtitle={t.showcase.thesis.subtitle} className="h-full hover:border-zinc-700 transition-colors">
+                 <div className="flex flex-col justify-between h-full">
+                   <p className="mb-6 text-zinc-400 font-light leading-relaxed">{t.showcase.thesis.desc}</p>
+                   <div>
+                     <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono uppercase tracking-widest border border-zinc-800 rounded-full text-zinc-500 hover:text-white hover:border-zinc-600 transition-all group-hover:bg-zinc-900">
+                       <span className="w-2 h-2 rounded-full bg-zinc-600 group-hover:bg-teal-500 transition-colors"></span>
+                       {t.showcase.thesis.button}
+                     </span>
+                   </div>
+                 </div>
                </Card>
              </a>
-             <div className="block">
-               <Card title={t.showcase.grades.title} subtitle={t.showcase.grades.subtitle}>
-                 <p className="mb-4 text-zinc-400">{t.showcase.grades.desc}</p>
-                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">{t.showcase.grades.button}</span>
+             <div className="block h-full">
+               <Card title={t.showcase.grades.title} subtitle={t.showcase.grades.subtitle} className="h-full border-zinc-800/50 bg-zinc-900/20">
+                 <div className="flex flex-col justify-between h-full">
+                   <p className="mb-6 text-zinc-500 font-light leading-relaxed">{t.showcase.grades.desc}</p>
+                   <div>
+                     <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono uppercase tracking-widest border border-dashed border-zinc-800 rounded-full text-zinc-600 cursor-not-allowed">
+                       <span className="w-2 h-2 rounded-full bg-zinc-800"></span>
+                       {t.showcase.grades.button}
+                     </span>
+                   </div>
+                 </div>
                </Card>
              </div>
           </div>
-          <HomeAssistantSensors />
+
+          <div className="pt-8 border-t border-zinc-900">
+            <HomeAssistantSensors />
+          </div>
         </Section>
 
         <Section id="expertise">
           <Heading>{t.expertise.heading}</Heading>
-          <Card title={t.expertise.core} className="mb-8">
+          
+          <div className="mb-16">
+            <h3 className="text-sm font-mono uppercase tracking-widest text-zinc-500 mb-6 flex items-center gap-4">
+              {t.expertise.core}
+              <span className="h-px bg-zinc-900 flex-grow"></span>
+            </h3>
             <Skills />
-          </Card>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6">
-            <Card title={t.expertise.ai.title} subtitle={t.expertise.ai.subtitle}>
-              {t.expertise.ai.desc}
+            <Card title={t.expertise.ai.title} subtitle={t.expertise.ai.subtitle} className="border-zinc-800 bg-zinc-900/20">
+              <p className="text-zinc-400 font-light leading-relaxed">{t.expertise.ai.desc}</p>
             </Card>
-            <Card title={t.expertise.optimization.title} subtitle={t.expertise.optimization.subtitle}>
-              {t.expertise.optimization.desc}
+            <Card title={t.expertise.optimization.title} subtitle={t.expertise.optimization.subtitle} className="border-zinc-800 bg-zinc-900/20">
+               <p className="text-zinc-400 font-light leading-relaxed">{t.expertise.optimization.desc}</p>
             </Card>
           </div>
         </Section>

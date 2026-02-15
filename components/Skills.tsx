@@ -8,7 +8,7 @@ export const Skills = () => {
   const skills = t.expertise.list;
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="flex flex-wrap gap-3">
       {skills.map((skill: any, i: number) => (
         <motion.div
           key={i}
@@ -16,10 +16,13 @@ export const Skills = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ delay: i * 0.05 }}
-          className="p-4 border border-zinc-800 rounded-md bg-zinc-900/50 backdrop-blur-sm hover:border-zinc-600 transition-colors"
+          className="group relative px-4 py-2 border border-zinc-800 bg-zinc-900/40 rounded-full hover:bg-zinc-800/80 hover:border-zinc-700 transition-all cursor-default"
         >
-          <span className="text-zinc-500 font-mono text-xs uppercase block mb-1">{skill.level}</span>
-          <h4 className="text-zinc-200 font-display text-lg">{skill.name}</h4>
+          <div className="flex items-center gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-zinc-600 group-hover:bg-teal-500 transition-colors duration-500" />
+            <span className="text-zinc-300 font-display text-sm group-hover:text-white transition-colors">{skill.name}</span>
+            <span className="text-zinc-600 text-[10px] font-mono uppercase tracking-wider pl-2 border-l border-zinc-800">{skill.level}</span>
+          </div>
         </motion.div>
       ))}
     </div>
