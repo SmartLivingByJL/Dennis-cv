@@ -8,12 +8,12 @@ export const Contact = () => (
     <div className="flex gap-6 justify-center">
       {[
         { name: "Email", href: "mailto:dennis.johansson.lloyd@gmail.com" },
-        { name: "LinkedIn", href: "https://www.linkedin.com/in/dennis-johansson-lloyd-b8054b8a/" },
-        { name: "GitHub", href: "https://github.com/" }
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/dennis-j-lloyd" },
+        { name: "GitHub", href: "https://github.com/smartlivingbyjl" }
       ].map((link, i) => (
-        <a 
-          key={i} 
-          href={link.href} 
+        <a
+          key={i}
+          href={link.href}
           className="text-white hover:text-zinc-400 font-display text-lg underline underline-offset-4 decoration-zinc-700 hover:decoration-white transition-all"
         >
           {link.name}
