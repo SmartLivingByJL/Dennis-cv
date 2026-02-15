@@ -70,14 +70,12 @@ export default function Home() {
                  <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500 hover:text-white hover:border-white transition-colors">Download PDF</span>
                </Card>
              </a>
-             <a href="/DJL_HD_Grade.pdf" target="_blank" rel="noopener noreferrer" className="block">
+             <div className="block">
                <Card title="Betyg & Intyg" subtitle="Academic Records">
                  <p className="mb-4 text-zinc-400">Samlade betyg och certifikat från Högskolan Dalarna.</p>
-                 <div className="flex gap-2">
-                   <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500 hover:text-white hover:border-white transition-colors">Download PDF</span>
-                 </div>
+                 <span className="inline-block px-3 py-1 text-xs font-mono border border-zinc-700 rounded-full text-zinc-500">Upcoming</span>
                </Card>
-             </a>
+             </div>
           </div>
           <HomeAssistantSensors />
         </Section>
