@@ -1,33 +1,40 @@
-import { motion } from "framer-motion";
+"use client";
 
-export const Contact = () => (
-  <div className="flex flex-col gap-8 max-w-xl mx-auto items-center text-center">
-    <p className="text-zinc-400 font-light text-xl">
-      Let's optimize the future together.
-    </p>
-    <div className="flex gap-6 justify-center">
-      {[
-        { name: "Email", href: "mailto:dennis.johansson.lloyd@gmail.com" },
-        { name: "LinkedIn", href: "https://www.linkedin.com/in/dennis-j-lloyd" },
-        { name: "GitHub", href: "https://github.com/smartlivingbyjl" }
-      ].map((link, i) => (
-        <a
-          key={i}
-          href={link.href}
-          className="text-white hover:text-zinc-400 font-display text-lg underline underline-offset-4 decoration-zinc-700 hover:decoration-white transition-all"
-        >
-          {link.name}
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+
+export const Contact = () => {
+  const { t } = useLanguage();
+
+  return (
+    <div className="flex flex-col gap-8 max-w-xl mx-auto items-center text-center">
+      <p className="text-zinc-400 font-light text-xl">
+        {t.contact.text}
+      </p>
+      <div className="flex gap-6 justify-center">
+        {[
+          { name: "Email", href: "mailto:dennis.johansson.lloyd@gmail.com" },
+          { name: "LinkedIn", href: "https://www.linkedin.com/in/dennis-j-lloyd" },
+          { name: "GitHub", href: "https://github.com/smartlivingbyjl" }
+        ].map((link, i) => (
+          <a
+            key={i}
+            href={link.href}
+            className="text-white hover:text-zinc-400 font-display text-lg underline underline-offset-4 decoration-zinc-700 hover:decoration-white transition-all"
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+      
+      <div className="flex gap-4 justify-center mt-8 pt-8 border-t border-zinc-900 w-full">
+        <a href="/DJL_CV_en.pdf" className="px-6 py-3 border border-zinc-800 rounded-full hover:bg-white hover:text-black transition-all text-sm font-mono tracking-wider">
+          {t.contact.downloadEn}
         </a>
-      ))}
+        <a href="/DJL_CV_se.pdf" className="px-6 py-3 border border-zinc-800 rounded-full hover:bg-white hover:text-black transition-all text-sm font-mono tracking-wider">
+          {t.contact.downloadSv}
+        </a>
+      </div>
     </div>
-    
-    <div className="flex gap-4 justify-center mt-8 pt-8 border-t border-zinc-900 w-full">
-      <a href="/DJL_CV_en.pdf" className="px-6 py-3 border border-zinc-800 rounded-full hover:bg-white hover:text-black transition-all text-sm font-mono tracking-wider">
-        Download CV (EN)
-      </a>
-      <a href="/DJL_CV_se.pdf" className="px-6 py-3 border border-zinc-800 rounded-full hover:bg-white hover:text-black transition-all text-sm font-mono tracking-wider">
-        Ladda ner CV (SV)
-      </a>
-    </div>
-  </div>
-);
+  );
+};

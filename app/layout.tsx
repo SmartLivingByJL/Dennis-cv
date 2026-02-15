@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import LanguageWrapper from "@/components/LanguageWrapper"; // Importera Wrapper
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="sv" className="scroll-smooth bg-zinc-950 text-zinc-100 antialiased selection:bg-white/20 selection:text-white">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans`}>
-        {children}
+        <LanguageWrapper>{children}</LanguageWrapper>
       </body>
     </html>
   );
